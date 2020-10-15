@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xwn92ehP/Djvorb4dVqCRwVLgWAG+g84KIBLo3+JGc9XvZkfEMLX4icNn/eculiploFfbCTrpW6sfiTWFKX2bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Portaria1 Unlimited\\Documents\\Visual Studio 2019\\Projects_Paralelos\\C_Sharp_Aulas-master\\WindowsFormCadastro\\WindowsFormCadastro.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Portaria1 Unlimited\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
