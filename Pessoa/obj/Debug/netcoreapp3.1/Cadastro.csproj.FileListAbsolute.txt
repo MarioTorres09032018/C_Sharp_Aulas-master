@@ -64,3 +64,12 @@ C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\git\C_Sharp_Aulas\Pess
 C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\git\C_Sharp_Aulas\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.pdb
 =======
 >>>>>>> 80c9b9632691aac474c766a33fcb3af843b1b3db
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\bin\Debug\netcoreapp3.1\Cadastro.deps.json
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\bin\Debug\netcoreapp3.1\Cadastro.dll
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\bin\Debug\netcoreapp3.1\Cadastro.pdb
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.csprojAssemblyReference.cache
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.AssemblyInfoInputs.cache
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.AssemblyInfo.cs
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.csproj.CoreCompileInputs.cache
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.dll
+C:\Users\Portaria1 Unlimited\Documents\Visual Studio 2019\Projects_Paralelos\C_Sharp_Aulas-master\Pessoa\obj\Debug\netcoreapp3.1\Cadastro.pdb

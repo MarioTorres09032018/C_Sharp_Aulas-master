@@ -8,10 +8,18 @@ namespace Aula
 {
     public class CargoVendedor : Pessoa
     {
-        public string n { get; set; }
+        public CargoVendedor(string nome, string sobrenome, string profissao, DateTime dtnascimento, string cordosolhos):base(nome,sobrenome,dtnascimento,cordosolhos)
+        {
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            this.profissao = profissao;
+            this.dtnascimento = dtnascimento;
+            this.cordosolhos = cordosolhos;
+        }
+        public string nome { get; set; }
         public string sobrenome { get; set; }
         public string profissao { get; set; }
-        public DateTime dtnascimento {get;set;}
+        public DateTime dtnascimento { get; set; }
         public string cordosolhos { get; set; }
 
         public CargoVendedor(string nome, string sobrenome, DateTime dataNascimento, string cordosolhos, string profissao, double QtdVendas, double SalMes,
@@ -25,15 +33,6 @@ namespace Aula
             Salariomes = SalMes;
             BonusMes= comissao;
             DiasTrabalhados = QtdDias;
-        }
-
-        public CargoVendedor(string n, string sobrenome, string profissao, DateTime dtnascimento, string cordosolhos)
-        {
-            this.n = n;
-            this.sobrenome = sobrenome;
-            this.profissao = profissao;
-            this.dtnascimento = dtnascimento;
-            this.cordosolhos = cordosolhos;
         }
 
         public string Cargo { get; set; }
