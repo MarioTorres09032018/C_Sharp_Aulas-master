@@ -3,11 +3,15 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Globalization;
 
 namespace Aula
 {
     public class CargoVendedor : Pessoa
     {
+        private string n;
+        private double qtdDias;
+
         public CargoVendedor(string nome, string sobrenome, string profissao, DateTime dtnascimento, string cordosolhos):base(nome,sobrenome,dtnascimento,cordosolhos)
         {
             this.nome = nome;
@@ -33,8 +37,22 @@ namespace Aula
             Salariomes = SalMes;
             BonusMes= comissao;
             DiasTrabalhados = QtdDias;
+            
+
         }
 
+        public CargoVendedor(string n, string sobrenome, double qtdDias, DateTime dtnascimento, string cordosolhos)
+            : base(n, sobrenome, dtnascimento, cordosolhos)
+        {
+
+            this.n = n;
+            this.sobrenome = sobrenome;
+            this.qtdDias = qtdDias;
+            this.dtnascimento = dtnascimento;
+            this.cordosolhos = cordosolhos;
+
+        }
+        
         public string Cargo { get; set; }
         public double Salariomes { get; set; }
         public double BonusMes { get; set; }
@@ -51,9 +69,9 @@ namespace SalarioBase_Comissao
         static void Main()
         {
             double QtdVendas = 0;
-            double mes;
-            double salario=1.200;
-            double comissao = 0.1;
+            double mes;               
+            double salario=1.200;    //salário Base
+            double comissao = 0.01;   //Comissão de 10%
             
            mes= QtdVendas / salario * comissao;
 

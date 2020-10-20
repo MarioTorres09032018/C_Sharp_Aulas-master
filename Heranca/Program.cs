@@ -43,7 +43,7 @@ namespace Aula
             //MenuInicial
             Escrever("\n*Bem vindo ao sistema de cadastro de PESSOAL");
             Escrever("");
-            Escrever("1-Digite seu Cargo: Vendedor, Assistente ADM, Analista TI");
+            Escrever("1-Digite seu Cargo na Empresa: Vendedor, Assistente ADM, Analista TI");
             Escrever("2-Pessoa Juridica");
             Escrever("3-Pessoa Fisica");
             Escrever("4-Sair");
@@ -72,25 +72,39 @@ namespace Aula
             double QtdVendas=0;
             double SalMes = 0;
             double comissao = 0;
+
             
+
             switch (escolha)
             {
                 case "1":
 
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out QtdVendas, out SalMes,
-                        out comissao, out QtdDias, out Cargo);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos,out Cargo,out QtdVendas,out QtdDias);
 
-                    Escrever("Digite sua Profissão.....:");
-                    profissao = Console.ReadLine();
-                    
-                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome,profissao, dtnascimento, cordosolhos);
+                    static void CalculoVendas()
+                    {
+                        double mes = 0;
+                        double QtdVendas = 0;
+                        double salario = 1.200;  //Salário Base
+                        double comissao = 0.01;   //Comissão de 10%
+                        
+                        Console.WriteLine("digite seu dalario");
 
+                        mes = double.Parse(Console.ReadLine());
+
+                        mes = QtdVendas / salario * comissao;
+
+                        Console.WriteLine("Seu salario este mes é de:......{0}", mes);
+
+                    }
+                                                                           
+                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome, Cargo, dtnascimento, cordosolhos);
+                   
                     Cvnd.Gravar();
                     break;
 
                 case "2":
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out QtdVendas, out SalMes, 
-                        out comissao, out QtdDias, out Cargo);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out Cargo, out QtdVendas, out QtdDias);
 
                     Escrever("Digite seu CNPJ.....:");
                     cnpj = Console.ReadLine();
@@ -100,8 +114,7 @@ namespace Aula
                     pj.Gravar();
                     break;
                 case "3":
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out QtdVendas, out SalMes, 
-                        out comissao, out QtdDias, out Cargo);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out Cargo, out QtdVendas, out QtdDias);
 
                     Escrever("Digite seu CPF.....:");
                     cpf = Console.ReadLine();
@@ -154,16 +167,13 @@ namespace Aula
                 Escrever("Cadastro Realizado com sucesso.");
             }
         }
-
-        private static void PerguntasBasicas(out string n, out string sobrenome, out DateTime dtnascimento, out int dia, out int mes, out int ano, out string cordosolhos)
-        {
-            throw new NotImplementedException();
-        }
-
         private static void PerguntasBasicas(out string n, out string sobrenome, out DateTime dtnascimento, out int dia, out int mes, out int ano,
-            out string cordosolhos, out double QtdVendas, out double SalMes, out double comissao, out double QtdDias, out string Cargo)
+            out string cordosolhos, out string Cargo, out double QtdVendas,out double QtdDias)
             
         {
+            Escrever("Informe o seu Cargo na Empresa");
+            Cargo = Console.ReadLine();
+
             Escrever("Digite seu nome.....:");
             n = Console.ReadLine();
 
@@ -184,20 +194,17 @@ namespace Aula
             Escrever("Digite a cor dos seus olhos.....:");
             cordosolhos = Console.ReadLine();
 
-            Escrever("Informe o numero de dias trabalhados");
-            QtdVendas = Convert.ToInt32(Console.ReadLine());
-            
-            Escrever("Informe o numero de dias trabalhados");
-            SalMes = Convert.ToInt32(Console.ReadLine());
+            Escrever("--------------------------------------:");
 
-            Escrever("Informe o numero de dias trabalhados");
-            comissao = Convert.ToInt32(Console.ReadLine());
+            Escrever("Calcular suas vendas do mês.....:");
+
+            Escrever("Quantidade de Vendas");
+            QtdVendas = Convert.ToInt32(Console.ReadLine());
 
             Escrever("Informe o numero de dias trabalhados");
             QtdDias = Convert.ToInt32(Console.ReadLine());
 
-            Escrever("Informe o numero de dias trabalhados");
-            Cargo = Console.ReadLine();
+           
 
         }
 
@@ -218,6 +225,8 @@ namespace Aula
         {
             Console.WriteLine(mensagemParaPrintarNaTela);
         }
+
+        
     }
 }
 
