@@ -15,10 +15,6 @@ namespace Aula
 
         public CargoVendedor(string nome, string sobrenome, string profissao, DateTime dtnascimento, string cordosolhos,string vendedor, string assistenteADM, string analistaTI)
                                :base(nome,sobrenome,dtnascimento,cordosolhos,vendedor,assistenteADM,analistaTI)
-
-
-
-       
         {
             this.nome = nome;
             this.sobrenome = sobrenome;
@@ -27,7 +23,6 @@ namespace Aula
             this.cordosolhos = cordosolhos;
             this.vendedor = vendedor;
             
-
         }
         public string nome { get; set; }
         public string sobrenome { get; set; }
@@ -36,7 +31,6 @@ namespace Aula
         public string cordosolhos { get; set; }
         public string vendedor { get; set; }
         
-
         static void Main()
         {
             double QtdVendas = 0;
