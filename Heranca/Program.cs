@@ -63,6 +63,9 @@ namespace Aula
             string cnpj = string.Empty;
             string profissao = string.Empty;
             string Cargo = string.Empty;
+            string vendedor = string.Empty;
+            string assistenteADM = string.Empty;
+            string analistaTI = string.Empty;
             DateTime dtnascimento = DateTime.MinValue;
             bool pesquisa = false;
             int dia = 0;
@@ -98,7 +101,7 @@ namespace Aula
 
                     }
                                                                            
-                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome, Cargo, dtnascimento, cordosolhos);
+                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome, Cargo, dtnascimento, cordosolhos,vendedor,assistenteADM,analistaTI);
                    
                     Cvnd.Gravar();
                     break;
