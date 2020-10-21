@@ -31,9 +31,9 @@ namespace Aula
         public string cordosolhos { get; set; }
         public string vendedor { get; set; }
         
-        static void Main()
+        static void Main()    //tentativa de cálculo
         {
-            double QtdVendas = 0;
+            double QtdVendas = 0;    
             double mes;
             double salario = 1.200;    //salário Base
             double comissao = 0.01;   //Comissão de 10%
