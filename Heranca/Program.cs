@@ -89,7 +89,7 @@ namespace Aula
                         double mes = 0;
                         double QtdVendas = 0;
                         double salario = 1.200;  //Salário Base
-                        double comissao = 0.01;   //Comissão de 10%
+                        double comissao = 0.1;   //Comissão de 10%
                         
                         Console.WriteLine("digite seu dalario");
 
