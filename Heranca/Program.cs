@@ -89,7 +89,7 @@ namespace Aula
                         double mes = 0;
                         double QtdVendas = 0;
                         double salario = 1.200;  //Salário Base
-                        double comissao = 0.01;   //Comissão de 10%
+                        double comissao = 0.1;   //Comissão de 10%
                         
                         Console.WriteLine("digite seu dalario");
 
@@ -176,18 +176,23 @@ namespace Aula
         {
             Escrever("Informe o seu Cargo na Empresa");
             Cargo = Console.ReadLine();
+            Cargo = Cargo.ToUpper();
 
             Escrever("Digite seu nome.....:");
             n = Console.ReadLine();
+            n = n.ToUpper();
 
             Escrever("Digite seu sobrenome.....:");
             sobrenome = Console.ReadLine();
+            sobrenome = sobrenome.ToUpper();
 
             Escrever("Digite o dia do seu nascimento.....:");
             dia = Convert.ToInt16(Console.ReadLine());
+            
 
             Escrever("Digite o mês do seu nascimento.....:");
             mes = Convert.ToInt16(Console.ReadLine());
+            
 
             Escrever("Digite o ano do seu nascimento.....:");
             ano = Convert.ToInt16(Console.ReadLine());
@@ -196,6 +201,7 @@ namespace Aula
 
             Escrever("Digite a cor dos seus olhos.....:");
             cordosolhos = Console.ReadLine();
+            cordosolhos = cordosolhos.ToUpper(); 
 
             Escrever("--------------------------------------:");
 
