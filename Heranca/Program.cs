@@ -82,32 +82,49 @@ namespace Aula
             {
                 case "1":
 
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos,out Cargo,out QtdVendas,out QtdDias);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos);
+
+                    Console.WriteLine("Informe o seu Cargo na Empresa");
+                    Cargo = Console.ReadLine();
+                    Cargo = Cargo.ToUpper();
+
+                    Console.WriteLine("----------------------------------");
+                    Console.WriteLine("Calcular suas vendas do mês.....:");
+                    Console.WriteLine("----------------------------------");
+
+                    Console.WriteLine("Quantidade de Vendas");
+                    QtdVendas = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Informe o numero de dias trabalhados");
+                    QtdDias = Convert.ToInt32(Console.ReadLine());
+
 
                     static void CalculoVendas()
                     {
                         double mes = 0;
+                        double QtdDias = 0;
                         double QtdVendas = 0;
                         double salario = 1.200;  //Salário Base
                         double comissao = 0.1;   //Comissão de 10%
+                          
                         
-                        Console.WriteLine("digite seu dalario");
+                        Console.WriteLine("digite seu salário");
 
                         mes = double.Parse(Console.ReadLine());
 
-                        mes = QtdVendas / salario * comissao;
+                        mes = QtdDias / salario * QtdVendas * comissao;
 
-                        Console.WriteLine("Seu salario este mes é de:......{0}", mes);
+                        Console.WriteLine("Seu salário este mês é de:......{0}", mes);
 
                     }
                                                                            
-                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome, Cargo, dtnascimento, cordosolhos,vendedor,assistenteADM,analistaTI);
+                    CargoVendedor Cvnd = new CargoVendedor(n, sobrenome, Cargo, dtnascimento, cordosolhos,vendedor,assistenteADM, analistaTI);
                    
                     Cvnd.Gravar();
                     break;
 
                 case "2":
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out Cargo, out QtdVendas, out QtdDias);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos);
 
                     Escrever("Digite seu CNPJ.....:");
                     cnpj = Console.ReadLine();
@@ -117,7 +134,7 @@ namespace Aula
                     pj.Gravar();
                     break;
                 case "3":
-                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos, out Cargo, out QtdVendas, out QtdDias);
+                    PerguntasBasicas(out n, out sobrenome, out dtnascimento, out dia, out mes, out ano, out cordosolhos);
 
                     Escrever("Digite seu CPF.....:");
                     cpf = Console.ReadLine();
@@ -171,12 +188,9 @@ namespace Aula
             }
         }
         private static void PerguntasBasicas(out string n, out string sobrenome, out DateTime dtnascimento, out int dia, out int mes, out int ano,
-            out string cordosolhos, out string Cargo, out double QtdVendas,out double QtdDias)
+            out string cordosolhos)
             
         {
-            Escrever("Informe o seu Cargo na Empresa");
-            Cargo = Console.ReadLine();
-            Cargo = Cargo.ToUpper();
 
             Escrever("Digite seu nome.....:");
             n = Console.ReadLine();
@@ -202,18 +216,6 @@ namespace Aula
             Escrever("Digite a cor dos seus olhos.....:");
             cordosolhos = Console.ReadLine();
             cordosolhos = cordosolhos.ToUpper(); 
-
-            Escrever("--------------------------------------:");
-
-            Escrever("Calcular suas vendas do mês.....:");
-
-            Escrever("Quantidade de Vendas");
-            QtdVendas = Convert.ToInt32(Console.ReadLine());
-
-            Escrever("Informe o numero de dias trabalhados");
-            QtdDias = Convert.ToInt32(Console.ReadLine());
-
-           
 
         }
 
